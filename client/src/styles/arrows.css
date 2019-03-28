@@ -4,9 +4,23 @@
 } */
 
 .fa-angle-left {
-  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  z-index: 999;
 }
 
 .fa-angle-right {
-  padding: 20px;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  z-index: 999;
+}
+
+.backArrow {
+  z-index: 5;
+}
+
+.nextArrow {
+  z-index: 5;
 }

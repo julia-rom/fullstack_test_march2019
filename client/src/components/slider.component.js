@@ -45,10 +45,15 @@ export default class Slider extends Component {
 
     // decrease the current index by 1 when you click left arrow
     prevSlide = () => {
-        this.setState(prevState => ({
-            currentIndex: prevState.currentIndex - 1,
-            translateValue: prevState.translateValue + -(this.slideWidth())
-        }));
+        if (this.state.currentIndex !== 0) {
+            this.setState(prevState => ({
+                currentIndex: prevState.currentIndex - 1,
+                translateValue: prevState.translateValue + this.slideWidth()
+            }));
+        } else {
+            //do nothing if you're at the first image
+            return;
+        }
     }
 
     // increment the current index by 1 when you click right arrow
