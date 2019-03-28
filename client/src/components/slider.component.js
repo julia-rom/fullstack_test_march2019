@@ -38,17 +38,34 @@ export default class Slider extends Component {
         }
     }
 
+    // calculates width of individual slide
+    slideWidth = () => {
+        return document.querySelector('.slide').clientWidth
+    }
+
     // decrease the current index by 1 when you click left arrow
     prevSlide = () => {
         this.setState(prevState => ({
-            currentIndex: prevState.currentIndex - 1
+            currentIndex: prevState.currentIndex - 1,
+            translateValue: prevState.translateValue + -(this.slideWidth())
         }));
     }
 
     // increment the current index by 1 when you click right arrow
     nextSlide = () => {
+        // if we get to the end of the image array, reset image counter and 
+        // translate value to zero
+        if (this.state.currentIndex === this.state.shark_images.length - 1) {
+            return this.setState({
+                currentIndex: 0,
+                translateValue: 0
+            })
+        }
+
+        // only runs if we are not at the end of the image list
         this.setState(prevState => ({
-            currentIndex: prevState.currentIndex + 1
+            currentIndex: prevState.currentIndex + 1,
+            translateValue: prevState.translateValue + -(this.slideWidth())
         }));
     }
 
