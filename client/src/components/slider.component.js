@@ -82,7 +82,7 @@ export default class Slider extends Component {
                     // and out of view
                     style={{
                         transform: `translateX(${this.state.translateValue}px)`,
-                        transition: 'transform ease-out 0.45s'
+                        transition: 'transform ease-out 0.3s'
                     }}>
                     {
                         this.state.shark_images.map((image, i) => (

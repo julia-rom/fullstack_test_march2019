@@ -1,26 +1,13 @@
-/* .svg-inline--fa fa-angle-left fa-w-8 {
-  height: 35px;
-  padding: 20px;
-} */
-
 .fa-angle-left {
   position: absolute;
   top: 50%;
-  left: 25px;
-  z-index: 999;
+  left: 60px;
+  z-index: 10;
 }
 
 .fa-angle-right {
   position: absolute;
   top: 50%;
-  right: 25px;
-  z-index: 999;
-}
-
-.backArrow {
-  z-index: 5;
-}
-
-.nextArrow {
-  z-index: 5;
+  right: 60px;
+  z-index: 10;
 }
