@@ -1,10 +1,12 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../styles/arrows.css';
 
 const RightArrow = () => {
     return (
         <div className="nextArrow">
-            <i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
             <h2>I am the right arrow</h2>
+            <FontAwesomeIcon icon="angle-right" size="3x" />
         </div>
     );
 }
