@@ -3,10 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../styles/arrows.css';
 
 
-const LeftArrow = () => {
+const LeftArrow = (props) => {
     return (
-        <div className="backArrow">
-            <h2>I am the left arrow</h2>
+        <div className="backArrow" onClick={props.prevSlide}>
             <FontAwesomeIcon icon="angle-left" size="3x" />
         </div>
     );

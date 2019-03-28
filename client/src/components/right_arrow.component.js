@@ -2,12 +2,12 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../styles/arrows.css';
 
-const RightArrow = () => {
+const RightArrow = (props) => {
     return (
-        <div className="nextArrow">
-            <h2>I am the right arrow</h2>
+        <div className="nextArrow" onClick={props.nextSlide}>
             <FontAwesomeIcon icon="angle-right" size="3x" />
-        </div>
+        </div >
+
     );
 }
 
