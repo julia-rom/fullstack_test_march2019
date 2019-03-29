@@ -1,7 +1,5 @@
 .slide {
-  height: 600px;
-  width: 600px;
-  position: relative;
-  background-color: rgb(255, 213, 253);
-  z-index: 1;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
 }

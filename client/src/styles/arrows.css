@@ -1,0 +1,13 @@
+.fa-angle-left {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  z-index: 10;
+}
+
+.fa-angle-right {
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  z-index: 10;
+}
