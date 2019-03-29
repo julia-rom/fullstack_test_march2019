@@ -27,7 +27,16 @@ const catsList = [
 ];
 
 // Merge both arrays into new array
-const bothList = sharksList.concat(catsList)
+const bothList = shuffle(sharksList.concat(catsList))
+
+// Randomize array element order in-place. Using Fisher-Yates shuffle algorithm.
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
 
 // At root of sliderRoutes, send cat & shark photos
 const sliderRoutes = () => {
