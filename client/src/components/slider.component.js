@@ -3,13 +3,12 @@ import '../styles/slider.css';
 import Slide from './slide.component'
 import LeftArrow from './left_arrow.component'
 import RightArrow from './right_arrow.component'
+import Loading from './loading.component'
 
 export default class Slider extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            shark_images: [],
-            cat_images: [],
             images: null,
             currentIndex: 0,
             translateValue: 0,
@@ -26,13 +25,12 @@ export default class Slider extends Component {
     }
 
 
-
-    // calculates width of individual slide
+    // Calculate width of individual slide
     slideWidth = () => {
         return document.querySelector('.slide').clientWidth
     }
 
-    // decrease the current index by 1 when you click left arrow
+    // Decrease the current index by 1 when you click left arrow
     prevSlide = () => {
         if (this.state.currentIndex !== 0) {
             this.setState(prevState => ({
@@ -40,14 +38,13 @@ export default class Slider extends Component {
                 translateValue: prevState.translateValue + this.slideWidth()
             }));
         }
-        //do nothing if you're at the first image
+        // Do nothing if you're at the first image
         return;
     }
 
-    // increment the current index by 1 when you click right arrow
+    // Increment the current index by 1 when you click right arrow
+    // If we get to the end of the image array, reset image counter and translate value
     nextSlide = () => {
-        // if we get to the end of the image array, reset image counter and 
-        // translate value to zero
         if (this.state.currentIndex === this.state.images.shark.length - 1) {
             return this.setState({
                 currentIndex: 0,
@@ -55,7 +52,7 @@ export default class Slider extends Component {
             })
         }
 
-        // only runs if we are not at the end of the image list
+        // Only runs if we are not at the end of the image list
         this.setState(prevState => ({
             currentIndex: prevState.currentIndex + 1,
             translateValue: prevState.translateValue + -(this.slideWidth())
@@ -64,12 +61,14 @@ export default class Slider extends Component {
 
     render() {
         if (this.state.loading) {
-            return <h1>Loading...</h1>
+            return <div className="slider">
+                < Loading />
+            </div>
         } else {
             return (
                 <div className="slider">
                     <div className="slider-wrapper"
-                        // translateX will allow other images to sit off the screen 
+                        // TranslateX will allow other images to sit off the screen 
                         // and out of view
                         style={{
                             transform: `translateX(${this.state.translateValue}px)`,
@@ -77,16 +76,12 @@ export default class Slider extends Component {
                         }}>
                         {
                             this.state.images.shark.map((image, i) => (
-                                <Slide key={i} image={image} />
+                                < Slide key={i} image={image} />
                             ))
                         }
                     </div>
-                    <LeftArrow
-                        prevSlide={this.prevSlide}
-                    />
-                    <RightArrow
-                        nextSlide={this.nextSlide}
-                    />
+                    < LeftArrow prevSlide={this.prevSlide} />
+                    < RightArrow nextSlide={this.nextSlide} />
                 </div>
             );
         }
