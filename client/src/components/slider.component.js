@@ -57,7 +57,7 @@ export default class Slider extends Component {
         }));
     }
 
-    // Checks which buttons are active in the slider component
+    // Checks which buttons are active
     activeCheck = () => {
         if (this.state.sharkActive === true && this.state.catActive === false) {
             return 'shark'
@@ -70,6 +70,22 @@ export default class Slider extends Component {
         }
     }
 
+    handleCatButtonClick = () => {
+        if (this.activeCheck() === 'cat' || this.activeCheck() === 'both') {
+            return this.setState({ catActive: false })
+        } else {
+            return this.setState({ catActive: true })
+        }
+    }
+
+    handleSharkButtonClick = () => {
+        if (this.activeCheck() === 'shark' || this.activeCheck() === 'both') {
+            return this.setState({ sharkActive: false })
+        } else {
+            return this.setState({ sharkActive: true })
+        }
+    }
+
 
     render() {
         if (this.state.loading) {
@@ -79,7 +95,7 @@ export default class Slider extends Component {
         } else {
             return (
                 <div className="slider">
-                    < Buttons />
+                    < Buttons handleCatButtonClick={this.handleCatButtonClick} handleSharkButtonClick={this.handleSharkButtonClick} />
                     <div className="slider-wrapper"
                         // TranslateX will allow other images to sit off the screen 
                         // and out of view
