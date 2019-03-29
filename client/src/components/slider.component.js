@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import '../styles/slider.css';
-import Slide from './slide.component'
-import Arrows from './arrows.component'
-import Loading from './loading.component'
+import Slide from './slide.component';
+import Arrows from './arrows.component';
+import Buttons from './buttons.component';
+import Loading from './loading.component';
+import activeCheck from '../services/active_check'
 
 export default class Slider extends Component {
     constructor(props) {
@@ -11,7 +13,9 @@ export default class Slider extends Component {
             images: null,
             currentIndex: 0,
             translateValue: 0,
-            loading: true
+            loading: true,
+            catButtonActive: false,
+            sharkButtonActive: true,
         }
     }
 
@@ -66,6 +70,7 @@ export default class Slider extends Component {
         } else {
             return (
                 <div className="slider">
+                    < Buttons />
                     <div className="slider-wrapper"
                         // TranslateX will allow other images to sit off the screen 
                         // and out of view

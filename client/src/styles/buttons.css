@@ -1,5 +1,13 @@
-.catButton {
-  background-color: #4caf50; /* Green */
+.buttons {
+  display: block;
+  padding-bottom: 25px;
+}
+
+.button {
+  display: inline-block;
+  width: 105px;
+  margin: 0px 10px;
+  background-color: #575757;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -7,4 +15,8 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.button:hover {
+  cursor: pointer;
 }

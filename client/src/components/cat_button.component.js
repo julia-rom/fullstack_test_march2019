@@ -4,9 +4,7 @@ import '../styles/buttons.css';
 class CatButton extends Component {
     render() {
         return (
-            <div className="buttons">
-                <button className="catButton" type="button">Cats</button>
-            </div>
+            <button className="button" type="button">Cats</button>
         );
     }
 }

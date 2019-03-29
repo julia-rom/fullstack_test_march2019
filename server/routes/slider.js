@@ -26,12 +26,16 @@ const catsList = [
     'https://founded.media/hiring/photos/cats/4481336172_7f464f180d_b.jpg'
 ];
 
+// Merge both arrays into new array
+const bothList = sharksList.concat(catsList)
+
 // At root of sliderRoutes, send cat & shark photos
 const sliderRoutes = () => {
     router.route('/').get(function (req, res) {
         res.json({
             cat: catsList,
-            shark: sharksList
+            shark: sharksList,
+            both: bothList
         });
     });
 
