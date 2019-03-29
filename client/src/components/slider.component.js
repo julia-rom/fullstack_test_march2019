@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/slider.css';
 import Slide from './slide.component'
-import LeftArrow from './left_arrow.component'
-import RightArrow from './right_arrow.component'
+import Arrows from './arrows.component'
 import Loading from './loading.component'
 
 export default class Slider extends Component {
@@ -80,8 +79,7 @@ export default class Slider extends Component {
                             ))
                         }
                     </div>
-                    < LeftArrow prevSlide={this.prevSlide} />
-                    < RightArrow nextSlide={this.nextSlide} />
+                    < Arrows prevSlide={this.prevSlide} nextSlide={this.nextSlide} />
                 </div>
             );
         }
