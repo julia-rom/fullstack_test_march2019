@@ -26,21 +26,16 @@ const catsList = [
     'https://founded.media/hiring/photos/cats/4481336172_7f464f180d_b.jpg'
 ];
 
+// At root of sliderRoutes, send cat & shark photos
 const sliderRoutes = () => {
     router.route('/').get(function (req, res) {
-        // Todo.find(function (err, todos) {
-        //     if (err) {
-        //         console.log(err);
-        //     } else {
         res.json({
             cat: catsList,
             shark: sharksList
         });
-        //     }
-        // });
     });
 
     return router;
-}
+};
 
 module.exports = sliderRoutes();

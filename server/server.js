@@ -15,12 +15,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/www'));
 
-
-// app.use('/slider', sliderRoutes);
-
-//prefix all api requests with/api, and apply to router
+// Prefix all api requests with /api, and apply to router
 app.use("/api", router);
-//go to api/slider
+// At router level, any thing with /slider should go to api/slider
 router.use("/slider", sliderRoutes);
 
 app.listen(PORT, function () {
