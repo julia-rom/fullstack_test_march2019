@@ -27,7 +27,7 @@ const catsList = [
 ];
 
 const sliderRoutes = () => {
-    router.route('/slider').get(function (req, res) {
+    router.route('/').get(function (req, res) {
         // Todo.find(function (err, todos) {
         //     if (err) {
         //         console.log(err);

@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const router = express.Router();
 const PORT = 3002;
 
 // This let's us pass the router to the function, and apply routes to it
@@ -14,8 +15,13 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/www'));
 
-// Connect the /slider route to the slider router
-app.use('/slider', sliderRoutes);
+
+// app.use('/slider', sliderRoutes);
+
+//prefix all api requests with/api, and apply to router
+app.use("/api", router);
+//go to api/slider
+router.use("/slider", sliderRoutes);
 
 app.listen(PORT, function () {
     console.log("Server is running on Port: " + PORT);
