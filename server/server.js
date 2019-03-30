@@ -13,6 +13,8 @@ app.use(cors());
 
 // Allow body to be extracted from requests in JSON format
 app.use(bodyParser.json());
+
+// Serves static page that says the server is working
 app.use(express.static(__dirname + '/www'));
 
 // Prefix all api requests with /api, and apply to router

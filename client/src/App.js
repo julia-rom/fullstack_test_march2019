@@ -15,7 +15,6 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <h2>Cat & Shark pics</h2>
         < Slider />
       </div>
     );
