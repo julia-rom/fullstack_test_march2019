@@ -1,0 +1,36 @@
+.buttons {
+  display: block;
+  padding-bottom: 25px;
+}
+
+.button_inactive {
+  display: inline-block;
+  width: 105px;
+  margin: 0px 10px;
+  background-color: #575757;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button_active {
+  display: inline-block;
+  width: 105px;
+  margin: 0px 10px;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
