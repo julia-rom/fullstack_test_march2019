@@ -13,5 +13,4 @@ const Slide = ({ image }) => {
     return <div className="slide" style={styles}></div>
 }
 
-
 export default Slide

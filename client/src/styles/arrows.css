@@ -1,13 +1,23 @@
-.fa-angle-left {
+.arrows {
+  position: fixed;
+  top: 240px;
+  width: 800px;
+  height: 100px;
+  left: 2px;
+}
+
+.backArrow {
   position: absolute;
   top: 50%;
   left: 60px;
   z-index: 10;
+  cursor: pointer;
 }
 
-.fa-angle-right {
+.nextArrow {
   position: absolute;
   top: 50%;
   right: 60px;
   z-index: 10;
+  cursor: pointer;
 }
