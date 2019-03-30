@@ -15,8 +15,7 @@ export default class Slider extends Component {
             translateValue: 0,
             loading: true,
             sharkActive: true,
-            catActive: false,
-            bothActive: false
+            catActive: false
         }
     }
 
@@ -86,7 +85,6 @@ export default class Slider extends Component {
         }
     }
 
-
     render() {
         if (this.state.loading) {
             return <div className="slider">
@@ -95,7 +93,12 @@ export default class Slider extends Component {
         } else {
             return (
                 <div className="slider">
-                    < Buttons handleCatButtonClick={this.handleCatButtonClick} handleSharkButtonClick={this.handleSharkButtonClick} />
+                    < Buttons
+                        handleCatButtonClick={this.handleCatButtonClick}
+                        handleSharkButtonClick={this.handleSharkButtonClick}
+                        catActive={this.state.catActive}
+                        sharkActive={this.state.sharkActive}
+                    />
                     <div className="slider-wrapper"
                         // TranslateX will allow other images to sit off the screen 
                         // and out of view

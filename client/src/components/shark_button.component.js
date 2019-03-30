@@ -3,11 +3,19 @@ import '../styles/buttons.css';
 
 class SharkButton extends Component {
     render() {
-        return (
-            <button className="button" type="button" onClick={this.props.handleSharkButtonClick}>
-                Sharks
+        if (this.props.sharkActive === true) {
+            return (
+                <button className="button_active" type="button" onClick={this.props.handleSharkButtonClick}>
+                    Sharks
             </button>
-        );
+            );
+        } else if (this.props.sharkActive === false) {
+            return (
+                <button className="button_inactive" type="button" onClick={this.props.handleSharkButtonClick}>
+                    Sharks
+            </button>
+            )
+        }
     }
 }
 

@@ -3,12 +3,19 @@ import '../styles/buttons.css';
 
 class CatButton extends Component {
     render() {
-        return (
-            <button className="button" type="button" onClick={this.props.handleCatButtonClick}>
-                Cats
+        if (this.props.catActive === true) {
+            return (
+                <button className="button_active" type="button" onClick={this.props.handleCatButtonClick}>
+                    Cats
             </button>
-        );
+            );
+        } else {
+            return (
+                <button className="button_inactive" type="button" onClick={this.props.handleCatButtonClick}>
+                    Cats
+            </button>
+            )
+        }
     }
 }
-
 export default CatButton;

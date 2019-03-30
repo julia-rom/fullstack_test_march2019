@@ -7,8 +7,14 @@ class Buttons extends Component {
     render() {
         return (
             <div className="buttons">
-                < CatButton handleCatButtonClick={this.props.handleCatButtonClick} />
-                < SharkButton handleSharkButtonClick={this.props.handleSharkButtonClick} />
+                < CatButton
+                    handleCatButtonClick={this.props.handleCatButtonClick}
+                    catActive={this.props.catActive}
+                />
+                < SharkButton
+                    handleSharkButtonClick={this.props.handleSharkButtonClick}
+                    sharkActive={this.props.sharkActive}
+                />
             </div>
         );
     }
