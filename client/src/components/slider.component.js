@@ -65,7 +65,7 @@ export default class Slider extends Component {
         } else if (this.state.sharkActive === true && this.state.catActive === true) {
             return 'both'
         } else {
-            return
+            return 'none'
         }
     }
 

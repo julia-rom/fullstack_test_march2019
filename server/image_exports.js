@@ -26,6 +26,8 @@ const catsList = [
 // Merge both arrays into new array
 const bothList = shuffle(sharksList.concat(catsList))
 
+const noneSelected = ['https://i.ibb.co/Bj5swYT/nopick.png']
+
 // Randomize array element order in-place. Using Fisher-Yates shuffle algorithm.
 function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
@@ -39,5 +41,6 @@ function shuffle(a) {
 module.exports = {
     cat: catsList,
     shark: sharksList,
-    both: bothList
+    both: bothList,
+    none: noneSelected
 }

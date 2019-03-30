@@ -9,7 +9,7 @@ class SharkButton extends Component {
                     Sharks
             </button>
             );
-        } else if (this.props.sharkActive === false) {
+        } else {
             return (
                 <button className="button_inactive" type="button" onClick={this.props.handleSharkButtonClick}>
                     Sharks

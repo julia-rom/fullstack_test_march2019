@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const images = require('../images');
+const images = require('../image_exports');
 
 // At root of sliderRoutes, send cat & shark photos
 const sliderRoutes = () => {
