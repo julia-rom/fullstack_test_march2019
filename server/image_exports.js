@@ -23,10 +23,10 @@ const catsList = [
     'https://founded.media/hiring/photos/cats/4481336172_7f464f180d_b.jpg'
 ];
 
-// Merge both arrays into new array
-const bothList = shuffle(sharksList.concat(catsList))
-
 const noneSelected = ['https://i.ibb.co/Bj5swYT/nopick.png']
+
+// Merge cat & shark arrays into new array
+const bothList = shuffle(sharksList.concat(catsList))
 
 // Randomize array element order in-place. Using Fisher-Yates shuffle algorithm.
 function shuffle(a) {
