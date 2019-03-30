@@ -10,4 +10,4 @@ Uses Node.js, Express.js, React
 4. Start the web server using the 'nodemon server' command. The server runs on http://localhost:3002/.
 5. Cd.. then go into client directory
 6. Install client dependencies: npm i
-7. Start the client server using the 'npm start'command. The client runs on http://localhost:3000/.
+7. Start the client server using the 'npm start' command. The client runs on http://localhost:3000/.
