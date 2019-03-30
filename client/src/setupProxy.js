@@ -1,3 +1,4 @@
+// Sends client fetch request to server via proxy
 const proxy = require('http-proxy-middleware');
 
 module.exports = function (app) {
